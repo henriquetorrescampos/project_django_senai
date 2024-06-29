@@ -1,1 +1,1 @@
-# project_django_senai
+# Project Django - Senai
