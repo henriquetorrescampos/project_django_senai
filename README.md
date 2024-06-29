@@ -11,7 +11,7 @@ Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de
 Instale my-project com npm
 
 ```bash
- git clone https://github.com/henriquetorrescampos/project_django_senai/tree/main
+git clone https://github.com/henriquetorrescampos/project_django_senai/tree/main
 cd project_django_senai
 ```
     
