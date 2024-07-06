@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+from decouple import config, Csv
 
 import os
 # from dotenv import load_dotenv
@@ -27,12 +28,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECRET_KEY = 'django-insecure-*^+dg_1v*5^+&3o-ll8bt7svbnm)2gq^y+jwp4()=a_n1l%e%f'
-SECRET_KEY ='+r&%h19r5ca8(kxd6h+6f)@h1#+ji1u%$7=n%8ir=b2(#%^dak'
+# SECRET_KEY ='+r&%h19r5ca8(kxd6h+6f)@h1#+ji1u%$7=n%8ir=b2(#%^dak'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = config('DEBUG', cast=bool, default=False)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 
 # Application definition
