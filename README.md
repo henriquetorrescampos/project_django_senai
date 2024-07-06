@@ -1,11 +1,12 @@
 # Django Project - Senai
 
-This project is based on the course that I did in Senai using the framework Django from Python
+This project is based on the course that I've doing in Senai using the framework Django from Python
 
-## Instalação
+## How to install
 
 ```bash
-git clone https://github.com/henriquetorrescampos/project_django_senai.git
-cd project_django_senai
+git clone https://github.com/henriquetorrescampos/to_do_project.git
+cd to_do_project
+code .
 ```
     
