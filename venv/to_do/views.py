@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic import ListView, CreateView
+from django.urls import reverse_lazy
 
 from .models import Todo
 
@@ -23,4 +24,5 @@ class todoListView(ListView):
 class TodoCreateView(CreateView):
     model = Todo
     fields = ['tittle', 'date_final'] #lsita de campos que usuário pode alterar
+    success_url = reverse_lazy('todo_list')
     

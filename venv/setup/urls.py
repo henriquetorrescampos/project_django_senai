@@ -23,6 +23,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # path('', home),
     # path('', todoList),
-    path('', todoListView.as_view(template_name='to_do/todoList.html')),
-    path('criar', TodoCreateView.as_view(template_name='to_do/todo_form.html')), 
+    path('', 
+         todoListView.as_view(template_name='to_do/todoList.html'), 
+         name='todo_list'),
+    path('criar', 
+         TodoCreateView.as_view(template_name='to_do/todo_form.html'),
+         name='todo_create'), 
 ]
