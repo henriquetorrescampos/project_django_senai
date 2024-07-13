@@ -24,5 +24,5 @@ urlpatterns = [
     # path('', home),
     # path('', todoList),
     path('', todoListView.as_view(template_name='to_do/todoList.html')),
-    path('criar', TodoCreateView.as_view(template_name='to_do/form.html')),
+    path('criar', TodoCreateView.as_view(template_name='to_do/todo_form.html')), 
 ]
