@@ -11,6 +11,6 @@ def todoListar(request):
     #     'id': '1',
     #     'Tarefa': 'Comprar fralda'
     # }]
-    tarefas = Todo.objects.all()
+    tasks = Todo.objects.all()
     
-    return render(request, 'to_do/todoList.html', {'tarefas': tarefas})
+    return render(request, 'to_do/todoList.html', {'tasks': tasks})
