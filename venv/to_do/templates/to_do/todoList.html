@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="pt-BR" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listagem de Tarefas</title>
+  </head>
+  <body>
+    <h1>Listagem de tarefas</h1>
+    {{ tarefas }}
+    <ul>
+      {% for tarefa in tarefas %}
+        <li>ID: {{ tarefa.id }} - Tarefa: {{ tarefa.Tarefa }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
