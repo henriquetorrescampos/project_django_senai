@@ -17,10 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from to_do.views import home, todoListar
+from to_do.views import todoListView, TodoCreateView #todoList, home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('', home),
-    path('', todoListar),
+    # path('', todoList),
+    path('', todoListView.as_view(template_name='to_do/todoList.html')),
+    path('criar', TodoCreateView.as_view(template_name='to_do/form.html')),
 ]
