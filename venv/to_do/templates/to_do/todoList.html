@@ -30,6 +30,7 @@
           <td>
             <div class="btn-group" role="group" aria-label="Basic mixed styles">
               <button type="button" onclick="window.location.href='{% url 'todo_edit' pk=task.pk %}'" class="btn btn-warning">Editar</button>
+              <button type="button" onclick="window.location.href='{% url 'todo_completed' pk=task.pk %}'" class="btn btn-info">Completar</button>
               <button type="button" onclick="window.location.href='{% url 'todo_delete' pk=task.pk %}'" class="btn btn-danger">Excluir</button>
             </div>
           </td>

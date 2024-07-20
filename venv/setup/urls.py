@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from to_do.views import TodoListView, TodoCreateView, TodoUpdateView, TodoDeleteView
+from to_do.views import TodoListView, TodoCreateView, TodoUpdateView, TodoDeleteView, TodoCompletedView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -37,5 +37,9 @@ urlpatterns = [
     
     path('delete/<int:pk>',
          TodoDeleteView.as_view(),
-         name='todo_delete')
+         name='todo_delete'),
+    
+    path('completed/<int:pk>',
+         TodoCompletedView.as_view(),
+         name='todo_completed'),
 ]

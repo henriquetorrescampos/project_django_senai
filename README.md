@@ -1,6 +1,6 @@
 # Django Project - Senai
 
-This project is based on the course that I've doing in Senai using the framework Django from Python
+This project is based on the course that I've done in Senai using the framework Django from Python
 
 ## How to install
 
