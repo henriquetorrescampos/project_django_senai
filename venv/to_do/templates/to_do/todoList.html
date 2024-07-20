@@ -29,8 +29,8 @@
           <td>{{ task.date_final|date:'d/m/Y'|default:'-' }}</td>
           <td>
             <div class="btn-group" role="group" aria-label="Basic mixed styles">
-              <button type="button" class="btn btn-warning">Editar</button>
-              <button type="button" class="btn btn-danger">Excluir</button>
+              <button type="button" onclick="window.location.href='{% url 'todo_edit' pk=task.pk %}'" class="btn btn-warning">Editar</button>
+              <button type="button" onclick="window.location.href='{% url 'todo_delete' pk=task.pk %}'" class="btn btn-danger">Excluir</button>
             </div>
           </td>
         </tr>

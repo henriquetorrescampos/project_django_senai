@@ -2,18 +2,18 @@
 {% load crispy_forms_tags %}
 
 {% block titutlo %}
-  Adicionar Nova Tarefa
+  {{ page_tittle }}
 {% endblock %}
 
 {% block subtitutlo %}
-  Adicionar Nova Tarefa
+  {{ page_tittle }}
 {% endblock %}
 
 {% block conteudo %}
   <form method="post">
     {% csrf_token %}
     {{ form|crispy }}
-    <input type="submit" value="Enviar" />
+    <input type="submit" value="Enviar" class="btn btn-success" />
     <a href="{% url 'todo_list' %}" type="button" class="btn btn-secondary active">Voltar</a>
   </form>
 {% endblock %}

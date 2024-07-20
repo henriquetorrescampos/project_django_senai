@@ -17,18 +17,25 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from to_do.views import todoListView, TodoCreateView #todoList, home
+from to_do.views import TodoListView, TodoCreateView, TodoUpdateView, TodoDeleteView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('', home),
     # path('', todoList),
     
-    path('', todoListView.as_view(
-             template_name='to_do/todoList.html'), 
-             name='todo_list'),
+    path('',
+         TodoListView.as_view(template_name='to_do/todoList.html'), 
+         name='todo_list'),
     
-    path('criar', TodoCreateView.as_view(
-        template_name='to_do/todo_form.html'),
-        name='todo_create'), 
+    path('create',
+         TodoCreateView.as_view(),name='todo_create'), 
+    
+    path('edit/<int:pk>',
+         TodoUpdateView.as_view(),
+         name='todo_edit'),
+    
+    path('delete/<int:pk>',
+         TodoDeleteView.as_view(),
+         name='todo_delete')
 ]

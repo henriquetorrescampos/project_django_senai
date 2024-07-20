@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+
+{% block titutlo %}
+  Exclusão de Tarefas
+{% endblock %}
+
+{% block subtitutlo %}
+  Exclusão de tarefas
+{% endblock %}
+
+{% block conteudo %}
+  <script>
+    window.addEventListener('load', (event) => {
+      $('#modalDelete').modal('show')
+    })
+  </script>
+{% endblock %}
