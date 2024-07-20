@@ -15,5 +15,5 @@ class Todo(models.Model):
         blank = False)
     date_final = models.DateTimeField(
         verbose_name = 'Data da Finalização',
-        null = True,
-        blank = True) 
+        null = False,
+        blank = False) 
