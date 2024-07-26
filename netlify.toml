@@ -1,3 +1,4 @@
 [[redirects]]
 from = "/*"
-to = "/venv/
+to = "/venv/to_do/templates/index.html"
+status = 200
