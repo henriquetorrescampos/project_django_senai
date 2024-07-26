@@ -1,4 +1,4 @@
 [[redirects]]
 from = "/*"
-to = "/venv/to_do/templates/index.html"
+to = "/venv/to_do/templates/to_do/todoList.html"
 status = 200
